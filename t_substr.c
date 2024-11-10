@@ -6,14 +6,14 @@
 /*   By: yansquer <yansquer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 00:36:23 by yansquer          #+#    #+#             */
-/*   Updated: 2024/11/10 15:14:58 by yansquer         ###   ########.fr       */
+/*   Updated: 2024/11/10 16:04:01 by yansquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-int	main(int argc, char **argv)
+void	t_substr(int argc, char **argv)
 {
 	char	*str;
 	

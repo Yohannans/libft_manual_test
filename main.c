@@ -6,7 +6,7 @@
 /*   By: yansquer <yansquer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 06:32:47 by yansquer          #+#    #+#             */
-/*   Updated: 2024/11/10 11:57:13 by yansquer         ###   ########.fr       */
+/*   Updated: 2024/11/10 16:41:02 by yansquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,6 @@ int	main(int argc, char **argv)
 		else if (n == 33)
 			t_putnbr_fd(argc, argv);
 		else
-			printf("Not a correct number");
+			printf("Not a correct number\n");
 	}
 }

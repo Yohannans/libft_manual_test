@@ -6,7 +6,7 @@
 /*   By: yansquer <yansquer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 12:09:43 by yansquer          #+#    #+#             */
-/*   Updated: 2024/11/10 12:27:01 by yansquer         ###   ########.fr       */
+/*   Updated: 2024/11/10 15:41:24 by yansquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,8 @@
 void	t_bzero(int argc, char **argv)
 {
 	if (argc >= 4)
-		printf("%s\n", ft_bzero(argv[2], atoi(argv[3])));
+	{
+		ft_bzero(argv[2], atoi(argv[3]));
+		printf("%s\n", argv[2]);
+	}
 }

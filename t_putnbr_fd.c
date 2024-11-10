@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_lstadd_front.c                                   :+:      :+:    :+:   */
+/*   t_putnbr_fd.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yansquer <yansquer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/25 12:48:00 by yansquer          #+#    #+#             */
-/*   Updated: 2024/10/26 11:11:18 by yansquer         ###   ########.fr       */
+/*   Created: 2024/10/18 11:28:20 by yansquer          #+#    #+#             */
+/*   Updated: 2024/11/10 16:03:12 by yansquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"
+#include <fcntl.h>
+#include <unistd.h>
 
-int	main(int argc, char **argv)
+void	t_putnbr_fd(int argc, char **argv)
 {
-	t_list	*list;
-	if (argc == 3)
+	int fd;
+
+	if (argc >= 3)
 	{
-		list = ft_lstnew(ft_strdup(argv[1]));
-		ft_lstadd_front(&list, ft_lstnew(ft_strdup(argv[2])));
-		printf("%s, %p\n%s, %p\n", (char *)list->content, list->next, 
-			(char *)list->next->content, list->next->next);
-		free(list->next->content);
-		free(list->next);
-		free(list->content);
-		free(list);
+		fd = open("test.txt", O_WRONLY | O_APPEND | O_CREAT, 0640);
+		ft_putnbr_fd(ft_atoi(argv[2]), fd);
+		close(fd);
 	}
-	return (0);
 }
