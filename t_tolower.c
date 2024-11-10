@@ -6,7 +6,7 @@
 /*   By: yansquer <yansquer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 14:41:50 by yansquer          #+#    #+#             */
-/*   Updated: 2024/11/10 14:52:08 by yansquer         ###   ########.fr       */
+/*   Updated: 2024/11/10 18:13:15 by yansquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 
 void	t_tolower(int argc, char **argv)
 {
-	if (argc == 2)
-		printf("%c\n", ft_tolower(argv[1][0]));
+	if (argc >= 3)
+		printf("%c\n", ft_tolower(argv[2][0]));
 }
